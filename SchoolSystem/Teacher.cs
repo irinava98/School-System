@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSystem
 {
-    public class Teacher
+    public class Teacher: IIdentifiable
     {
         
 

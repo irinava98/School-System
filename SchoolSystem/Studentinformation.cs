@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSystem
 {
-    public class Studentinformation
+    public class Studentinformation: IIdentifiable
     {
         [Key]
         [ForeignKey("Student")]

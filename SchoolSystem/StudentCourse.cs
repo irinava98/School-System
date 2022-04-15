@@ -29,9 +29,5 @@ namespace SchoolSystem
        
         public double Assessment { get; set; }
 
-
-
-      
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,7 +88,7 @@ public class Writer
     {
         using (var db = new SchoolSystemDbContext())
         {
-            var oldteachers = db.Teachers.Where(x => x.Age > 55).ToList();
+            var oldteachers = db.Teachers.Where(x => x.Age > 55).AsNoTracking().ToList();
             foreach(var teacher in oldteachers)
             {
                 Console.WriteLine($"{teacher.FirstName} {teacher.MiddleName} {teacher.LastName} is {teacher.Age} years old.");
@@ -99,8 +100,8 @@ public class Writer
                 Console.WriteLine(studentname);
             }
 
-            var maxCredits = db.Courses.Select(x => x.Credits).Max().ToString();
-            Console.WriteLine("Max credits for a course are : "+maxCredits);
+            var maxCredits = db.Courses.Select(x => x.Credits).Min().ToString();
+            Console.WriteLine("Min credits for a course are : "+maxCredits);
 
         }
 

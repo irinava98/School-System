@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSystem
 {
-    public class Student
+    public class Student: IIdentifiable
     {
         [Key]
         public int Id { get; set; }

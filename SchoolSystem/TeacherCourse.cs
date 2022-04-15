@@ -21,7 +21,5 @@ namespace SchoolSystem
         [ForeignKey("Course")]
         public int CourseId { get; set; }
 
-       
-
     }
 }
