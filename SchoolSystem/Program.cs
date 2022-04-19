@@ -4,8 +4,11 @@ using SchoolSystem;
 using System;
 public class Program
 {    
+
     public async static Task Main(string[] args)
     {
+        
+
         var wr = new Writer();
         //wr.Create();
         //wr.Read();
@@ -88,7 +91,7 @@ public class Program
 
 
 
-            await DeleteById<Course>(3);
+            await DeleteById<Teacher>(1);
              
            
            
